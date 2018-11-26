@@ -33,46 +33,43 @@ todo.command("Request", "Create a get request to \"randomuser.me/api\" ", functi
         }
     });
 },
-    function (argv) {
-        processTheResults(argv);
+    function (params) {
+        processTheResults(params);
 
     }).help()
     .argv;
 
 function processTheResults(args) {
+
     const parameters = {
         method: "GET",
-        uri: `${uri}/?results=${(args.users>0&&args.users<=5000)?(args.users):(1)}&gender=${args.nationality}&format=${args.outputFormat}`,
+        uri: `${uri}/?results=${(args.users > 0 && args.users <= 5000) ? (args.users) : (1)}&gender=${args.nationality}&format=${args.outputFormat}`,
         json: isResultAJsonOjbect
     };
+
     rp(parameters)
-    // .then(repos=>{
-    //     console.log((repos.results));
-    // });
-        .then(repos => {
-            writeDataToFile(repos.results);
+        .then(requestResult => {
+            writeDataToFile(requestResult, args.outputFormat);
+        }).catch(err => {
+            console.log(err.message);
         });
 
 }
 
-// function writeDataToFile(responseResult,FileFormat) {
-//     const buffer = Buffer.from(JSON.stringify(responseResult));
-//     if(FileFormat === "JSON"){
-//         const jsonData = buffer.toJSON();
-//         const writeStream = fs.createWriteStream("UserInfo.json");
-//         writeStream.write(jsonData);
-//         writeStream.end();
-//     }
-//     else{
-//         const data = buffer.toString("utf8");
-//         const writeStream = fs.createWriteStream(`UserInfo.${FileFormat.toLowerCase()}`);
-//         writeStream.write(data);
-//         writeStream.end() ;
-//     }
-function writeDataToFile(responseResult) {
-    console.log(responseResult);
-    const buffer = Buffer.from(JSON.stringify(responseResult, null, "\t"));
-    const writeStream = fs.createWriteStream("UserInfo.json");
-    writeStream.write((buffer));
-    writeStream.end();
+function writeDataToFile(responseResult, FileFormat) {
+    if (FileFormat === "JSON") {
+        console.log(responseResult);
+        const buffer = Buffer.from(JSON.stringify(responseResult.results, null, "\t"));
+        const writeStream = fs.createWriteStream("UserInfo.json");
+        writeStream.write((buffer));
+        writeStream.end();
+    }
+    else {
+        console.log(responseResult);
+        const buffer = Buffer.from(responseResult);
+        const data = buffer.toString("utf8");
+        const writeStream = fs.createWriteStream(`UserInfo.${FileFormat.toLowerCase()}`);
+        writeStream.write(data);
+        writeStream.end() ;
+    }
 }

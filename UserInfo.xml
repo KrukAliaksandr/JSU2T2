@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+	<results>
+		<gender>female</gender>
+		<name>
+			<title>ms</title>
+			<first>nair</first>
+			<last>moreira</last>
+		</name>
+		<location>
+			<street>8733 rua santa maria </street>
+			<city>cabo frio</city>
+			<state>alagoas</state>
+			<postcode>37678</postcode>
+			<coordinates>
+				<latitude>-74.0269</latitude>
+				<longitude>107.7499</longitude>
+			</coordinates>
+			<timezone>
+				<offset>+9:30</offset>
+				<description>Adelaide, Darwin</description>
+			</timezone>
+		</location>
+		<email>nair.moreira@example.com</email>
+		<login>
+			<uuid>babeda20-4bb1-4ed7-a949-c6d001f0b8ca</uuid>
+			<username>organicrabbit471</username>
+			<password>doodle</password>
+			<salt>SSe6YE4L</salt>
+			<md5>b4dcdacd6099131fe238a44881f15cc9</md5>
+			<sha1>6b26f5814e26c68848d94dd80d710f5886071d67</sha1>
+			<sha256>04155dbec0f17be29d5d8bc769f2a57033bbc87497ba99ad2729ab552eb962ae</sha256>
+		</login>
+		<dob>
+			<date>1990-10-04T01:30:37Z</date>
+			<age>28</age>
+		</dob>
+		<registered>
+			<date>2002-08-10T12:31:14Z</date>
+			<age>16</age>
+		</registered>
+		<phone>(19) 0757-6017</phone>
+		<cell>(81) 9686-2037</cell>
+		<id>
+			<name></name>
+			<value></value>
+		</id>
+		<picture>
+			<large>https://randomuser.me/api/portraits/women/2.jpg</large>
+			<medium>https://randomuser.me/api/portraits/med/women/2.jpg</medium>
+			<thumbnail>https://randomuser.me/api/portraits/thumb/women/2.jpg</thumbnail>
+		</picture>
+		<nat>BR</nat>
+	</results>
+	<info>
+		<seed>8893bc3dc9db9dda</seed>
+		<results>1</results>
+		<page>1</page>
+		<version>1.2</version>
+	</info>
+</user>
