@@ -1,0 +1,32 @@
+{
+  "name": "jsu2t2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "task1.js",
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5",
+    "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  },
+  "scripts": {
+    "test": "-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrukAliaksandr/JSU2T2.git"
+  },
+  "author": "Aliaksandr_Kruk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrukAliaksandr/JSU2T2/issues"
+  },
+  "homepage": "https://github.com/KrukAliaksandr/JSU2T2#readme"
+}
