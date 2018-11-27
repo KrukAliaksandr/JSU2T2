@@ -57,6 +57,7 @@ function processTheResults(args) {
 }
 
 function writeDataToFile(responseResult, FileFormat) {
+    
     if (FileFormat === "JSON") {
         console.log(responseResult);
         const buffer = Buffer.from(JSON.stringify(responseResult.results, null, "\t"));
@@ -65,6 +66,7 @@ function writeDataToFile(responseResult, FileFormat) {
         writeStream.end();
     }
     else {
+        // Обработка для других форматов
         console.log(responseResult);
         const buffer = Buffer.from(responseResult);
         const data = buffer.toString("utf8");
